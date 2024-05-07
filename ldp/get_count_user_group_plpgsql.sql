@@ -6,7 +6,7 @@ CREATE FUNCTION get_count_user_group_plpgsql(
 
     /* Parameters */
 
-    param_user_group TEXT DEFAULT ''
+    param_user_group VARCHAR DEFAULT ''
 
 )
 /* Set return type */
@@ -32,8 +32,8 @@ BEGIN
         /* Query Start */
         SELECT  
             user_users.patron_group :: TEXT,
-            user_groups.desc,
-            user_groups.group,
+            user_groups.DESC :: TEXT,
+            user_groups.GROUP :: TEXT,
             COUNT(user_users.id) :: INTEGER
         FROM
             public.user_users  
