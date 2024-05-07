@@ -14,10 +14,10 @@ RETURNS TABLE (
 AS 
 $$
 SELECT  
-    user_users.patron_group,
+    user_users.patron_group :: TEXT,
     user_groups.desc,
     user_groups.group,
-    COUNT(user_users.id)
+    COUNT(user_users.id) :: INTEGER
 FROM
     public.user_users  
     LEFT JOIN public.user_groups ON user_groups.id = user_users.patron_group
