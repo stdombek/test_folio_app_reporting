@@ -28,6 +28,4 @@ GROUP BY
     user_groups.desc,
     user_groups.GROUP
 $$
-LANGUAGE SQL
-STABLE
-PARALLEL SAFE;
+LANGUAGE SQL;
