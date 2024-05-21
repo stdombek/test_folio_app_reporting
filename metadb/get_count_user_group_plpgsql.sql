@@ -1,4 +1,4 @@
---ldp:function get_count_user_group_plpgsql
+--metadb:function get_count_user_group_plpgsql
 
 DROP FUNCTION IF EXISTS get_count_user_group_plpgsql;
 
