@@ -14,15 +14,15 @@ RETURNS TABLE (
 AS 
 $$
 SELECT  
-    COALESCE(users__t.patron_group, '') :: TEXT,
-    COALESCE(groups__t.desc, '')        :: TEXT,
-    COALESCE(groups__t.group, '')       :: TEXT,
-    COUNT(users__t.id)                  :: INTEGER
+    users__t.patron_group :: TEXT,
+    groups__t.DESC        :: TEXT,
+    groups__t.group       :: TEXT,
+    COUNT(users__t.id)    :: INTEGER
 FROM
     folio_users.users__t  
     LEFT JOIN folio_users.groups__t ON groups__t.id = users__t.patron_group
 WHERE 
-    ((COALESCE(groups__t.group, '') :: TEXT = param_user_group) OR (param_user_group = ''))
+    ((groups__t.group = param_user_group) OR (param_user_group = ''))
 GROUP BY 
     users__t.patron_group,
     groups__t.desc,
