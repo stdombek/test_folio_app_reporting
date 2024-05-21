@@ -6,7 +6,7 @@ CREATE FUNCTION get_count_user_group_plpgsql(
 
     /* Parameters */
 
-    param_user_group VARCHAR DEFAULT ''
+    param_user_group TEXT DEFAULT ''
 
 )
 /* Set return type */
