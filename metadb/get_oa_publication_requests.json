@@ -1,0 +1,19 @@
+{
+    "displayName": "Open Access: Publication requests",
+    "description": "List of publication request for Open Access",
+    "instructions": "You can filter out the following things.",
+    "parameters": [
+        {
+            "name": "param_request_status_label",
+            "displayName": "Status (label)",
+            "type": "text",
+            "required": false
+        }
+        {
+            "name": "param_request_number",
+            "displayName": "Request number",
+            "type": "text",
+            "required": false
+        }
+    ]
+}
