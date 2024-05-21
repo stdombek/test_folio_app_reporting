@@ -8,7 +8,7 @@
             "displayName": "Status (label)",
             "type": "text",
             "required": false
-        }
+        },
         {
             "name": "param_request_number",
             "displayName": "Request number",
