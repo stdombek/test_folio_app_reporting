@@ -48,6 +48,4 @@ BEGIN
         /* Query End */
 END;
 $$
-LANGUAGE plpgsql
-STABLE
-PARALLEL SAFE;
+LANGUAGE plpgsql;
