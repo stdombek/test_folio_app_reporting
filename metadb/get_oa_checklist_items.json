@@ -1,0 +1,31 @@
+{
+    "displayName": "Open Access: Checklist items",
+    "description": "List of checklist items to a publication request for Open Access",
+    "instructions": "You can filter out the following things.",
+    "parameters": [
+        {
+            "name": "param_request_number",
+            "displayName": "Request number",
+            "type": "text",
+            "required": false
+        },
+        {
+            "name": "param_outcome_value",
+            "displayName": "Outcome value",
+            "type": "text",
+            "required": false
+        },
+        {
+            "name": "param_outcome_label",
+            "displayName": "Outcome label",
+            "type": "text",
+            "required": false
+        },
+        {
+            "name": "param_description",
+            "displayName": "Description",
+            "type": "text",
+            "required": false
+        }		
+    ]
+}
