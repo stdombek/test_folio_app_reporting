@@ -1,0 +1,25 @@
+{
+    "displayName": "COUNTER Platform Master Report",
+    "description": "This report is a standard view of COUNTER Platform Master Reports and showing total and unique item requests, as well as platform searches. The report contains also additonal informations to the COUNTER report file.",
+    "instructions": "You can choose the following things",
+    "parameters": [
+        {
+            "name": "param_reporting_start_period",
+            "displayName": "Start period",
+            "type": "date",
+            "required": false
+        },
+        {
+            "name": "param_reporting_end_period",
+            "displayName": "End period",
+            "type": "date",
+            "required": false
+        },
+        {
+            "name": "param_platform",
+            "displayName": "Platform",
+            "type": "text",
+            "required": false
+        }
+    ]
+}
