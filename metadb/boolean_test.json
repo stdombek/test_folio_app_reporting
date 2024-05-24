@@ -7,13 +7,13 @@
             "name": "param_status",
             "displayName": "User status",
             "type": "text",
-			"default": "all",
+            "default": "all",
             "required": false,
-			"controlled.options": [
-			    "all",
-				"active",
-				"inactive"
-			]
+            "controlled.options": [
+                "all",
+                "active",
+                "inactive"
+            ]
         }
     ]
 }
