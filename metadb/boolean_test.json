@@ -1,0 +1,19 @@
+{
+    "displayName": "Test boolean values",
+    "description": "This is a test to filter out boolean values",
+    "instructions": "You can choose the status of an user.",
+    "parameters": [
+        {
+            "name": "param_status",
+            "displayName": "User status",
+            "type": "text",
+			"default": "all",
+            "required": false,
+			"controlled.options": [
+			    "all",
+				"active",
+				"inactive"
+			]
+        }
+    ]
+}
