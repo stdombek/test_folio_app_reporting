@@ -30,8 +30,8 @@ BEGIN
 
         /* Query Start */
         SELECT
-            users.id AS user_id,
-            jsonb_extract_path_text(users.jsonb, 'barcode') AS user_barcode,
+            users.id                                                          :: TEXT AS user_id,
+            jsonb_extract_path_text(users.jsonb, 'barcode')                   :: TEXT AS user_barcode,
             COALESCE(jsonb_extract_path_text(users.jsonb, 'active'), 'false') :: TEXT AS user_status
         FROM 
             folio_users.users
