@@ -1,5 +1,7 @@
 {
     "displayName": "List of all configured custom fields in Users.",
     "description": "List of all configured custom fields in Users.",
-    "instructions": "You can view all custom fields in the Settings."
+    "instructions": "You can view all custom fields in the Settings.",
+    "parameters": [
+    ]
 }
