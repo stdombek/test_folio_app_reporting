@@ -2,7 +2,7 @@
 
 DROP FUNCTION IF EXISTS get_custom_fields_users_settings;
 
-CREATE FUNCTION get_count_user_group()
+CREATE FUNCTION get_custom_fields_users_settings()
 RETURNS TABLE (
     id             TEXT,
     name           TEXT,
