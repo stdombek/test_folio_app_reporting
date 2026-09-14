@@ -26,7 +26,7 @@ FROM
     CROSS JOIN LATERAL jsonb_array_elements(jsonb_extract_path(cf.jsonb, 'selectField', 'options', 'values')) AS custom_fields (jsonb) 
 )
 SELECT 
-    cf.id,
+    cf.id                                      :: TEXT,
     jsonb_extract_path_text(cf.jsonb, 'name')  :: TEXT,
     jsonb_extract_path_text(cf.jsonb, 'refId') :: TEXT,
     cf_options.option_id                       :: TEXT,
