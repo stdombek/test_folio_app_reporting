@@ -84,7 +84,7 @@ SELECT
     string_agg(refid_mehrfachauswahl.option_value, ', ')                :: TEXT,
     jsonb_extract_path_text(users.jsonb, 'customFields', 'textfeld')    :: TEXT,
     jsonb_extract_path_text(users.jsonb, 'customFields', 'textbereich') :: TEXT,
-    jsonb_extract_path_text(users.jsonb)                                :: TEXT
+    users.jsonb                                                         :: TEXT
 FROM 
     folio_de15_users.users
     LEFT JOIN refid_radiobutton ON refid_radiobutton.option_id = jsonb_extract_path_text(users.jsonb, 'customFields', 'radiobutton')
@@ -100,7 +100,8 @@ GROUP BY
     refid_radiobutton.option_value,
     refid_einzelauswahl.option_value,
     jsonb_extract_path_text(users.jsonb, 'customFields', 'textfeld'),
-    jsonb_extract_path_text(users.jsonb, 'customFields', 'textbereich')
+    jsonb_extract_path_text(users.jsonb, 'customFields', 'textbereich'),
+    users.jsonb
 /*
  * MAIN QUERY ENDE
  */
