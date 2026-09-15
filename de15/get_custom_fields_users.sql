@@ -12,7 +12,8 @@ RETURNS TABLE (
     einzelauswahl_option_value TEXT,
     options_mehrfachauswahl    TEXT,
     textfield                  TEXT,
-    textbereich                TEXT
+    textbereich                TEXT,
+    datensatz                  TEXT
 )
 AS 
 $$
@@ -82,7 +83,8 @@ SELECT
     refid_einzelauswahl.option_value                                    :: TEXT,
     string_agg(refid_mehrfachauswahl.option_value, ', ')                :: TEXT,
     jsonb_extract_path_text(users.jsonb, 'customFields', 'textfeld')    :: TEXT,
-    jsonb_extract_path_text(users.jsonb, 'customFields', 'textbereich') :: TEXT
+    jsonb_extract_path_text(users.jsonb, 'customFields', 'textbereich') :: TEXT,
+    users.jsonb                                                         :: TEXT
 FROM 
     folio_de15_users.users
     LEFT JOIN refid_radiobutton ON refid_radiobutton.option_id = jsonb_extract_path_text(users.jsonb, 'customFields', 'radiobutton')
